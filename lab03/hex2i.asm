@@ -14,10 +14,21 @@ inmsg:
 main:   
         # Get address of input string
         la   $a0, inmsg
+	lw   $s0, 0($a0) # load the string in $s0
+	li   $t0, 4      # setting the loop counter
 
 
         #################################
         # Write your program here
+     
+loop:   # Main loop ---------
+	 srl  $t1, $s0, 28
+	 
+
+	
+        
+     
+        
         # The following assumes the result is in $s0
         #################################
 
